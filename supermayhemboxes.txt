@@ -1,0 +1,23 @@
+"Gamemode"
+{
+	"name"		"Super Mayhem Boxes"
+	"title"		"Super Mayhem Boxes"
+	"version"	"1.3.0"
+
+	"author_name"	"Original author: William 'JetBoom' Moodhe, Updated by: Babbe"
+	"author_email"	"jetboom@yahoo.com"
+	"author_url"	"http://www.noxiousnet.com/"
+
+	"icon"		""
+	"hide"		"0"
+	"info"				"Fight in a 2D physics-based game."
+	"description"		"Fight in a 2D physics-based game."
+
+	"mappattern"
+	{
+		"1"	"^smb"
+		"2"	"^nox2d"
+	}
+
+	"selectable"	"1"
+}
