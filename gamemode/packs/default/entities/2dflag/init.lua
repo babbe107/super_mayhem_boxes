@@ -18,8 +18,8 @@ function ENT:Initialize()
 		phys:Wake()
 	end
 
-	local col = team.TeamInfo[self.Team].Color
-	self:SetColor(col.r, col.g, col.b, 255)
+	local colr,colg,colb = team.TeamInfo[self.Team].Color
+	self:SetColor(colr, colg, colb, 255)
 
 	self:SetName(self.Team)
 end

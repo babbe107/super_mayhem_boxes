@@ -520,7 +520,7 @@ function MakepHelp(category, page)
 	end
 	pHelp = Window
 
-	local label = EasyLabel(Window, "Quick Help: "..tostring(category), "mayhem16", color_white)
+	local label = EasyLabel(Window, "Quick Help: "..tostring(category), "Default", color_white)
 	label:SetPos(wide * 0.5 - label:GetWide() * 0.5, 4)
 
 	local text = GAMEMODE.HelpTopics[category][page]
