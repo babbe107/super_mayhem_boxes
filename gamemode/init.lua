@@ -173,13 +173,13 @@ function GM:InitPostEntity()
 	for _, ent in pairs(ents.FindByClass("redflagpoint")) do
 		team.TeamInfo[TEAM_RED].FlagPoint = ent:GetPos()
 	end
-	for _, ent in pairs(ents.FindByClass("info_flag_mayhem")) do
+	for _, ent in pairs(ents.FindByClass("info_flag_mario")) do
 		team.TeamInfo[TEAM_RED].FlagPoint = ent:GetPos()
 	end
 	for _, ent in pairs(ents.FindByClass("greenflagpoint")) do
 		team.TeamInfo[TEAM_GREEN].FlagPoint = ent:GetPos()
 	end
-	for _, ent in pairs(ents.FindByClass("info_flag_green")) do
+	for _, ent in pairs(ents.FindByClass("info_flag_luigi")) do
 		team.TeamInfo[TEAM_GREEN].FlagPoint = ent:GetPos()
 	end
 

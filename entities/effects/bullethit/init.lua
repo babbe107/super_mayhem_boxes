@@ -6,6 +6,7 @@ function EFFECT:Init(data)
 	self.TeamID = math.Round(data:GetMagnitude())
 	local col = team.GetColor(self.TeamID) or color_white
 	self.Col = col
+	local colr,colg,colb = col
 	self.DieTimeTwo = CurTime() + 0.25
 	self.SpriteSize = math.Rand(14, 20)
 
@@ -16,7 +17,7 @@ function EFFECT:Init(data)
 
 	self.Entity:SetModel("models/Weapons/w_bullet.mdl")
 	self.Entity:SetMaterial("models/shiny")
-	self.Entity:SetColor(col.r, col.g, col.b, 255)
+	self.Entity:SetColor(colr, colg, colb, 255)
 	self.Entity:SetModelScale(3)
 	self.Entity:SetAngles(self.Dir:Angle())
 end
@@ -29,8 +30,7 @@ end
 local matGlow = Material("effects/yellowflare")
 function EFFECT:Render()
 	local ct = CurTime()
-	local col = self.Col
-	local r,g,b = col.r, col.g, col.b
+	local colr, colg, colb = self.Col
 	if not self.EndParticles then
 		self.EndParticles = true
 		local emitter = ParticleEmitter(self.EndPos)
@@ -55,7 +55,7 @@ function EFFECT:Render()
 	render.DrawSprite(self.EndPos, siz, siz, col)
 	render.SetMaterial(matGlow)
 	render.DrawQuadEasy(self.EndPos + self.Dir * 0.1, self.Dir, siz, siz, col)
-	self.Entity:SetColor(r, g, b, math.min(255, siz))
+	self.Entity:SetColor(colr,colg,colb, math.min(255, siz))
 	self.Entity:SetPos(self.EndPos)
 
 	self.Entity:DrawModel()
